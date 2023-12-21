@@ -1,6 +1,6 @@
-# utils
+# @tomjs/utils
 
-[![npm](https://img.shields.io/npm/v/utils)](https://www.npmjs.com/package/utils) ![node-current (scoped)](https://img.shields.io/node/v/utils) ![NPM](https://img.shields.io/npm/l/utils) [![Docs](https://www.paka.dev/badges/v0/cute.svg)](https://www.paka.dev/npm/utils)
+[![npm](https://img.shields.io/npm/v/@tomjs/utils)](https://www.npmjs.com/package/@tomjs/utils) ![node-current (scoped)](https://img.shields.io/node/v/@tomjs/utils) ![NPM](https://img.shields.io/npm/l/@tomjs/utils) [![Docs](https://www.paka.dev/badges/v0/cute.svg)](https://www.paka.dev/npm/@tomjs/utils)
 
 **English** | [中文](./README.zh_CN.md)
 
@@ -10,11 +10,11 @@
 
 ```bash
 # pnpm
-pnpm add utils
+pnpm add @tomjs/utils
 
 # yarn
-yarn add utils
+yarn add @tomjs/utils
 
 # npm
-npm i utils
+npm i @tomjs/utils
 ```
