@@ -36,7 +36,7 @@
   },
   "scripts": {
     "dev": "tsup --watch",
-    "build": "tsup",
+    "build": "tsup --minify",
     "test": "jest",
     "lint": "run-s lint:eslint lint:prettier",
     "lint:eslint": "eslint \"{src,scripts,test}/**/*.ts\" *.{js,cjs,ts} --fix --cache",

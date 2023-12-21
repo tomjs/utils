@@ -6,6 +6,14 @@
 
 > Pure `JavaScript` library that can run in the `browser` and `node.js`
 
+## Support environment
+
+- Node.js >=16
+- Chrome >=87
+- Firefox >=78
+- Safari >=14
+- Edge >=88
+
 ## Install
 
 ```bash
