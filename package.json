@@ -1,6 +1,6 @@
 {
   "name": "@tomjs/utils",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "Pure 'JavaScript' library that can run in the 'browser' and 'node.js'",
   "keywords": [
     "tomjs",
