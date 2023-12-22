@@ -1,9 +1,10 @@
 {
   "name": "@tomjs/utils",
   "version": "1.0.7",
-  "description": "basic node.js template",
+  "description": "Pure 'JavaScript' library that can run in the 'browser' and 'node.js'",
   "keywords": [
-    "node"
+    "tomjs",
+    "utils"
   ],
   "author": {
     "name": "Tom Gao",
