@@ -26,3 +26,8 @@ yarn add @tomjs/utils
 # npm
 npm i @tomjs/utils
 ```
+
+## 文档
+
+- [paka.dev](https://paka.dev) 提供的 [API文档](https://paka.dev/npm/@tomjs/utils).
+- [unpkg.com](https://www.unpkg.com/) 提供的 [index.d.ts](https://www.unpkg.com/browse/@tomjs/utils/dist/index.d.ts).

@@ -13,7 +13,7 @@ export function uuid36() {
  * Generate a uuid of 32 string length
  */
 export function uuid() {
-  return uuid().replace(/-/g, '');
+  return uuid36().replace(/-/g, '');
 }
 
 /**
