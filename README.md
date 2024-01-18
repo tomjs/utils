@@ -29,5 +29,5 @@ npm i @tomjs/utils
 
 ## Documentation
 
-- [API Documentation](https://paka.dev/npm/@tomjs/vite-plugin-html) provided by [paka.dev](https://paka.dev).
-- [index.d.ts](https://www.unpkg.com/browse/@tomjs/vite-plugin-html/dist/index.d.ts) provided by [unpkg.com](https://www.unpkg.com).
+- [API Documentation](https://paka.dev/npm/@tomjs/utils) provided by [paka.dev](https://paka.dev).
+- [index.d.ts](https://www.unpkg.com/browse/@tomjs/utils/dist/index.d.ts) provided by [unpkg.com](https://www.unpkg.com).
