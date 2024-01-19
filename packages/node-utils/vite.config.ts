@@ -1,14 +1,14 @@
+import fs from 'node:fs';
 import { defineConfig } from 'vite';
 import dts from 'vite-plugin-dts';
 
 export default defineConfig({
   build: {
-    target: ['node16', 'chrome87', 'firefox78', 'safari14', 'edge88'],
+    target: ['node16', 'es2021'],
     lib: {
       entry: 'src/index.ts',
       fileName: 'index',
-      name: 'Tomjs',
-      formats: ['es', 'cjs', 'iife'],
+      formats: ['es', 'cjs'],
     },
     minify: false,
     rollupOptions: {
@@ -17,5 +17,12 @@ export default defineConfig({
       },
     },
   },
-  plugins: [dts({ rollupTypes: true })],
+  plugins: [
+    dts({
+      rollupTypes: true,
+      afterBuild: () => {
+        fs.copyFileSync('dist/index.d.ts', 'dist/index.d.mts');
+      },
+    }),
+  ],
 });

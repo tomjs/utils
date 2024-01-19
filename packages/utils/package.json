@@ -1,0 +1,47 @@
+{
+  "name": "@tomjs/utils",
+  "version": "1.1.1",
+  "description": "Pure 'JavaScript' library that can run in the 'browser' and 'node.js'",
+  "keywords": [
+    "tomjs",
+    "utils"
+  ],
+  "author": {
+    "name": "Tom Gao",
+    "email": "tom@tomgao.cc"
+  },
+  "license": "MIT",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "require": {
+        "default": "./dist/index.js",
+        "types": "./dist/index.d.ts"
+      },
+      "import": {
+        "default": "./dist/index.mjs",
+        "types": "./dist/index.d.mts"
+      }
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "engines": {
+    "node": ">=16"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tomjs/utils.git"
+  },
+  "scripts": {
+    "build": "vite build",
+    "test": "vitest"
+  }
+}

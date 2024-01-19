@@ -1,0 +1,47 @@
+{
+  "name": "@tomjs/node-utils",
+  "version": "0.0.0",
+  "description": "A collection of functions for `node.js` projects",
+  "keywords": [
+    "node",
+    "utils"
+  ],
+  "author": {
+    "name": "Tom Gao",
+    "email": "tom@tomgao.cc"
+  },
+  "license": "MIT",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "require": {
+        "default": "./dist/index.js",
+        "types": "./dist/index.d.ts"
+      },
+      "import": {
+        "default": "./dist/index.mjs",
+        "types": "./dist/index.d.mts"
+      }
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "engines": {
+    "node": ">=16"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tomjs/utils.git"
+  },
+  "scripts": {
+    "build": "vite build",
+    "test": "vitest"
+  }
+}
