@@ -1,6 +1,7 @@
 import fs from 'node:fs';
 import { defineConfig } from 'vite';
 import dts from 'vite-plugin-dts';
+import target from 'vite-plugin-target';
 
 export default defineConfig({
   build: {
@@ -23,6 +24,9 @@ export default defineConfig({
       afterBuild: () => {
         fs.copyFileSync('dist/index.d.ts', 'dist/index.d.mts');
       },
+    }),
+    target({
+      node: {},
     }),
   ],
 });
