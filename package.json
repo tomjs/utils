@@ -16,7 +16,7 @@
   },
   "scripts": {
     "build": "cross-env VITE_CJS_IGNORE_WARNING=true pnpm -r --stream --filter=@tomjs/* build",
-    "test": "vitest",
+    "test": "cross-env VITE_CJS_IGNORE_WARNING=true vitest",
     "lint": "run-s lint:eslint lint:prettier",
     "lint:eslint": "eslint \"{packages,scripts}/**/*.ts\" *.{js,cjs,ts} --fix --cache",
     "lint:prettier": "prettier --write .",

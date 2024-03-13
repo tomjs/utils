@@ -1,3 +1,5 @@
+/// <reference types="vitest" />
+
 import fs from 'node:fs';
 import { defineConfig } from 'vite';
 import dts from 'vite-plugin-dts';
@@ -26,4 +28,7 @@ export default defineConfig({
       },
     }),
   ],
+  test: {
+    globals: true,
+  },
 });
