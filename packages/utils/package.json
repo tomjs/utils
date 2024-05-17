@@ -3,8 +3,9 @@
   "version": "1.1.2",
   "description": "Pure 'JavaScript' library that can run in the 'browser' and 'node.js'",
   "keywords": [
-    "tomjs",
-    "utils"
+    "utils",
+    "node",
+    "browser"
   ],
   "author": {
     "name": "Tom Gao",
@@ -38,7 +39,8 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/tomjs/utils.git"
+    "url": "git+https://github.com/tomjs/utils.git",
+    "directory": "packages/utils"
   },
   "scripts": {
     "build": "vite build",

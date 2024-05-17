@@ -38,7 +38,8 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/tomjs/utils.git"
+    "url": "git+https://github.com/tomjs/utils.git",
+    "directory": "packages/node-utils"
   },
   "scripts": {
     "build": "vite build",
