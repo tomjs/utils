@@ -1,12 +1,12 @@
 /**
  * Concatenate urls using `/` to form a complete url
- * @param urls url paths
+ * @param parts url paths
  * @returns
  */
-export function urlConcat(...urls: string[]) {
-  return urls
-    .map(s => (s || '').trim())
-    .filter(s => s)
+export function urlConcat(...parts: string[]) {
+  return parts
+    .map(part => (part || '').trim())
+    .filter(part => part)
     .join('/')
     .replace(/\/+/g, '/')
     .replace(/:\//, '://');
