@@ -1,12 +1,12 @@
 {
   "name": "@tomjs/utils-packages",
+  "private": true,
   "version": "1.0.0",
   "description": "A collection of functions for `node.js` and `web` projects.",
-  "private": true,
   "engines": {
     "node": ">=16"
   },
-  "packageManager": "pnpm@9.1.1",
+  "packageManager": "pnpm@9.1.2",
   "workspaces": [
     "packages/*"
   ],

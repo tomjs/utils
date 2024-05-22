@@ -1,0 +1,54 @@
+{
+  "name": "@tomjs/logger",
+  "version": "0.0.0",
+  "description": "logger for `node.js`",
+  "keywords": [
+    "node",
+    "utils"
+  ],
+  "author": {
+    "name": "Tom Gao",
+    "email": "tom@tomgao.cc"
+  },
+  "license": "MIT",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "require": {
+        "default": "./dist/index.js",
+        "types": "./dist/index.d.ts"
+      },
+      "import": {
+        "default": "./dist/index.mjs",
+        "types": "./dist/index.d.mts"
+      }
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "engines": {
+    "node": ">=16"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tomjs/utils.git",
+    "directory": "packages/logger"
+  },
+  "scripts": {
+    "build": "vite build",
+    "test": "vitest"
+  },
+  "dependencies": {
+    "chalk": "^4.1.2",
+    "dayjs": "^1.11.11",
+    "log-symbols": "^4.1.0",
+    "strip-ansi": "^6.0.1"
+  }
+}
