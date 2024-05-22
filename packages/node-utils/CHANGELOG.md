@@ -1,3 +1,7 @@
+## [1.0.1](https://github.com/tomjs/utils/compare/%40tomjs%2Fnode-utils%401.0.0...%40tomjs%2Fnode-utils%401.0.1) (2024-05-22)
+
+- fix: mkdir's mode parameter is now optional [8703b51](https://github.com/tomjs/utils/commit/8703b51)
+
 ## [1.0.0](https://github.com/tomjs/utils/compare/%40tomjs%2Fnode-utils%400.0.1...%40tomjs%2Fnode-utils%401.0.0) (2024-05-20)
 
 - test: remove global vitest [eefedf8](https://github.com/tomjs/utils/commit/eefedf8)
