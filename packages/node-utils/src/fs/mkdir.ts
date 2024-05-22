@@ -18,10 +18,11 @@ const checkPath = (pth: string) => {
 
 /**
  * Asynchronously creates a directory. Returns undefined, or if recursive is true, the first directory path created.
+ * @param dir directory path.
  * @param mode directory permission mode. If not specified, defaults to 0o777.
  * @returns
  */
-export function mkdir(dir: string, mode: string | number) {
+export function mkdir(dir: string, mode?: string | number) {
   checkPath(dir);
 
   return fsp.mkdir(dir, {
@@ -36,7 +37,7 @@ export function mkdir(dir: string, mode: string | number) {
  * @param mode directory permission mode. If not specified, defaults to 0o777.
  * @returns
  */
-export function mkdirSync(dir: string, mode: string | number) {
+export function mkdirSync(dir: string, mode?: string | number) {
   checkPath(dir);
 
   return fs.mkdirSync(dir, {
