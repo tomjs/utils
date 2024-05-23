@@ -1,3 +1,8 @@
+## [2.1.0](https://github.com/tomjs/utils/compare/%40tomjs%2Fnode%402.0.0...%40tomjs%2Fnode%402.1.0) (2024-05-23)
+
+- feat: add copy and empty methods [b711106](https://github.com/tomjs/utils/commit/b711106)
+- docs: remove deprecate info [0a74282](https://github.com/tomjs/utils/commit/0a74282)
+
 ## 2.0.0 (2024-05-23)
 
 - chore: rename @tomjs/node-utils to @tomjs/node [b105c14](https://github.com/tomjs/utils/commit/b105c14)
