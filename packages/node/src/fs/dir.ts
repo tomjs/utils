@@ -1,6 +1,7 @@
 import fs from 'node:fs';
 import fsp from 'node:fs/promises';
 import path from 'node:path';
+import { rm, rmSync } from './remove';
 
 // Adapted from https://github.com/sindresorhus/make-dir
 const checkPath = (pth: string) => {
@@ -30,6 +31,14 @@ export function mkdir(dir: string, mode?: string | number) {
     recursive: true,
   });
 }
+/**
+ * Asynchronously creates a directory. Returns undefined, or if recursive is true, the first directory path created.
+ * @param dir directory path.
+ * @param mode directory permission mode. If not specified, defaults to 0o777.
+ * @alias mkdir
+ * @returns
+ */
+export const mkdirp = mkdir;
 
 /**
  * Synchronously creates a directory. Returns undefined, or if recursive is true, the first directory path created.
@@ -44,4 +53,31 @@ export function mkdirSync(dir: string, mode?: string | number) {
     mode: mode ?? 0o777,
     recursive: true,
   });
+}
+/**
+ * Synchronously creates a directory. Returns undefined, or if recursive is true, the first directory path created.
+ * @param dir directory path.
+ * @param mode directory permission mode. If not specified, defaults to 0o777.
+ * @returns
+ */
+export const mkdirpSync = mkdirSync;
+
+/**
+ * Ensures that a directory is empty. Deletes directory contents if the directory is not empty.
+ * If the directory does not exist, it is created. The directory itself is not deleted.
+ * @param dir directory path.
+ */
+export async function emptyDir(dir: string) {
+  await rm(dir);
+  await mkdir(dir);
+}
+
+/**
+ * Ensures that a directory is empty. Deletes directory contents if the directory is not empty.
+ * If the directory does not exist, it is created. The directory itself is not deleted.
+ * @param dir directory path.
+ */
+export function emptyDirSync(dir: string) {
+  rmSync(dir);
+  mkdirSync(dir);
 }

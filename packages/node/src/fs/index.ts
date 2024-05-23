@@ -1,3 +1,4 @@
+export * from './copy';
+export * from './dir';
 export * from './json';
-export * from './mkdir';
 export * from './remove';
