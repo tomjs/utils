@@ -1,3 +1,7 @@
+## 2.0.0 (2024-05-23)
+
+- chore: rename @tomjs/node-utils to @tomjs/node [b105c14](https://github.com/tomjs/utils/commit/b105c14)
+
 ## [1.0.2](https://github.com/tomjs/utils/compare/%40tomjs%2Fnode-utils%401.0.1...%40tomjs%2Fnode-utils%401.0.2) (2024-05-23)
 
 - chore: deprecate @tomjs/node-utils [e7b5371](https://github.com/tomjs/utils/commit/e7b5371)
