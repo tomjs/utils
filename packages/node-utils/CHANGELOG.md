@@ -1,3 +1,7 @@
+## [1.0.2](https://github.com/tomjs/utils/compare/%40tomjs%2Fnode-utils%401.0.1...%40tomjs%2Fnode-utils%401.0.2) (2024-05-23)
+
+- chore: deprecate @tomjs/node-utils [e7b5371](https://github.com/tomjs/utils/commit/e7b5371)
+
 ## [1.0.1](https://github.com/tomjs/utils/compare/%40tomjs%2Fnode-utils%401.0.0...%40tomjs%2Fnode-utils%401.0.1) (2024-05-22)
 
 - fix: mkdir's mode parameter is now optional [8703b51](https://github.com/tomjs/utils/commit/8703b51)
