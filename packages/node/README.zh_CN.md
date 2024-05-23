@@ -6,10 +6,6 @@
 
 > 适用于 `node.js` 项目的函数集合。
 
-## 过时的
-
-改包名为 [@tomjs/node](https://www.npmjs.com/package/@tomjs/node)
-
 ## 安装
 
 ```bash
