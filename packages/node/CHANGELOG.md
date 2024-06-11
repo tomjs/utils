@@ -1,3 +1,7 @@
+## [2.2.0](https://github.com/tomjs/utils/compare/%40tomjs%2Fnode%402.1.0...node%402.2.0) (2024-06-11)
+
+- chore: use tsup replace vite [c40e1b3](https://github.com/tomjs/utils/commit/c40e1b3)
+
 ## [2.1.0](https://github.com/tomjs/utils/compare/%40tomjs%2Fnode%402.0.0...%40tomjs%2Fnode%402.1.0) (2024-05-23)
 
 - feat: add copy and empty methods [b711106](https://github.com/tomjs/utils/commit/b711106)
