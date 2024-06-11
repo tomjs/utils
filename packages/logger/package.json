@@ -42,7 +42,7 @@
     "directory": "packages/logger"
   },
   "scripts": {
-    "build": "vite build",
+    "build": "tsup && prettier --write ./dist",
     "test": "vitest"
   },
   "dependencies": {

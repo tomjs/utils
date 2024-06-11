@@ -39,10 +39,10 @@
   "repository": {
     "type": "git",
     "url": "git+https://github.com/tomjs/utils.git",
-    "directory": "packages/node-utils"
+    "directory": "packages/node"
   },
   "scripts": {
-    "build": "vite build",
+    "build": "tsup && prettier --write ./dist",
     "test": "vitest"
   }
 }

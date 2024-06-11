@@ -43,7 +43,7 @@
     "directory": "packages/utils"
   },
   "scripts": {
-    "build": "vite build",
+    "build": "tsup && prettier --write ./dist",
     "test": "vitest"
   }
 }
