@@ -5,7 +5,13 @@
   "engines": {
     "node": ">=16"
   },
-  "keywords": [],
+  "keywords": [
+    "package",
+    "pkg",
+    "npm",
+    "yarn",
+    "pnpm"
+  ],
   "author": {
     "name": "Tom Gao",
     "email": "tom@tomgao.cc"
