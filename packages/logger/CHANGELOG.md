@@ -1,3 +1,7 @@
+## [1.1.1](https://github.com/tomjs/utils/compare/logger%401.1.0...logger%401.1.1) (2024-06-18)
+
+- fix: run build script before publish [8b82de6](https://github.com/tomjs/utils/commit/8b82de6)
+
 ## [1.1.0](https://github.com/tomjs/utils/compare/%40tomjs%2Flogger%401.0.0...logger%401.1.0) (2024-06-11)
 
 - chore: use tsup replace vite [c40e1b3](https://github.com/tomjs/utils/commit/c40e1b3)

@@ -1,6 +1,6 @@
 {
   "name": "@tomjs/pkg",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "npm package tools",
   "engines": {
     "node": ">=16"

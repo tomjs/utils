@@ -1,3 +1,7 @@
+## [1.2.1](https://github.com/tomjs/utils/compare/utils%401.2.0...utils%401.2.1) (2024-06-18)
+
+- fix: run build script before publish [8b82de6](https://github.com/tomjs/utils/commit/8b82de6)
+
 ## [1.2.0](https://github.com/tomjs/utils/compare/%40tomjs%2Futils%401.1.2...utils%401.2.0) (2024-06-11)
 
 - chore: use tsup replace vite [c40e1b3](https://github.com/tomjs/utils/commit/c40e1b3)
