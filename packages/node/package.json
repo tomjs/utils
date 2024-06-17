@@ -43,6 +43,7 @@
   },
   "scripts": {
     "build": "tsup && prettier --write ./dist",
-    "test": "vitest"
+    "test": "vitest",
+    "prepublishOnly": "pnpm build"
   }
 }

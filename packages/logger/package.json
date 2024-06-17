@@ -43,7 +43,8 @@
   },
   "scripts": {
     "build": "tsup && prettier --write ./dist",
-    "test": "vitest"
+    "test": "vitest",
+    "prepublishOnly": "pnpm build"
   },
   "dependencies": {
     "chalk": "^4.1.2",
