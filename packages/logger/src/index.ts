@@ -102,7 +102,7 @@ export class Logger {
    * set debug mode or not
    */
   enableDebug(debug: boolean) {
-    this._debug = debug ?? true;
+    this._debug = !!debug;
   }
 
   /**
