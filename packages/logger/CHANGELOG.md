@@ -1,3 +1,7 @@
+## [1.1.2](https://github.com/tomjs/utils/compare/logger%401.1.1...logger%401.1.2) (2024-06-19)
+
+- fix: enableDebug [e1c0d16](https://github.com/tomjs/utils/commit/e1c0d16)
+
 ## [1.1.1](https://github.com/tomjs/utils/compare/logger%401.1.0...logger%401.1.1) (2024-06-18)
 
 - fix: run build script before publish [8b82de6](https://github.com/tomjs/utils/commit/8b82de6)
