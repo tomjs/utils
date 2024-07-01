@@ -1,3 +1,8 @@
+## [1.0.4](https://github.com/tomjs/utils/compare/pkg%401.0.3...pkg%401.0.4) (2024-07-01)
+
+- docs: change api doc logo [6d45df2](https://github.com/tomjs/utils/commit/6d45df2)
+- chore: update @tomjs/node@2.2.3
+
 ## [1.0.3](https://github.com/tomjs/utils/compare/pkg%401.0.2...pkg%401.0.3) (2024-07-01)
 
 - chore: change api document [01973eb](https://github.com/tomjs/utils/commit/01973eb)

@@ -1,3 +1,7 @@
+## [2.2.3](https://github.com/tomjs/utils/compare/node%402.2.2...node%402.2.3) (2024-07-01)
+
+- docs: change api doc logo [6d45df2](https://github.com/tomjs/utils/commit/6d45df2)
+
 ## [2.2.2](https://github.com/tomjs/utils/compare/node%402.2.1...node%402.2.2) (2024-07-01)
 
 - chore: change api document [01973eb](https://github.com/tomjs/utils/commit/01973eb)
