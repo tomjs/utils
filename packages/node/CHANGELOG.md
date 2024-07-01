@@ -1,3 +1,7 @@
+## [2.2.2](https://github.com/tomjs/utils/compare/node%402.2.1...node%402.2.2) (2024-07-01)
+
+- chore: change api document [01973eb](https://github.com/tomjs/utils/commit/01973eb)
+
 ## [2.2.1](https://github.com/tomjs/utils/compare/node%402.2.0...node%402.2.1) (2024-06-18)
 
 - fix: run build script before publish [8b82de6](https://github.com/tomjs/utils/commit/8b82de6)
