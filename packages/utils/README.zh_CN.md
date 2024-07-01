@@ -1,6 +1,6 @@
 # @tomjs/utils
 
-[![npm](https://img.shields.io/npm/v/@tomjs/utils)](https://www.npmjs.com/package/@tomjs/utils) ![node-current (scoped)](https://img.shields.io/node/v/@tomjs/utils) ![NPM](https://img.shields.io/npm/l/@tomjs/utils) [![Docs](https://raw.githubusercontent.com/tomjs/assets/main/npm/api.svg)](https://www.unpkg.com/browse/@tomjs/utils/dist/index.d.ts)
+[![npm](https://img.shields.io/npm/v/@tomjs/utils)](https://www.npmjs.com/package/@tomjs/utils) ![node-current (scoped)](https://img.shields.io/node/v/@tomjs/utils) ![NPM](https://img.shields.io/npm/l/@tomjs/utils) [![Docs](https://img.shields.io/badge/API-unpkg-orange)](https://www.unpkg.com/browse/@tomjs/utils/dist/index.d.ts)
 
 [English](./README.md) | **中文**
 
