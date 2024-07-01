@@ -1,6 +1,6 @@
 # @tomjs/logger
 
-[![npm](https://img.shields.io/npm/v/@tomjs/logger)](https://www.npmjs.com/package/@tomjs/logger) ![node-current (scoped)](https://img.shields.io/logger/v/@tomjs/logger) ![NPM](https://img.shields.io/npm/l/@tomjs/logger) [![Docs](https://www.paka.dev/badges/v0/cute.svg)](https://www.paka.dev/npm/@tomjs/logger)
+[![npm](https://img.shields.io/npm/v/@tomjs/logger)](https://www.npmjs.com/package/@tomjs/logger) ![node-current (scoped)](https://img.shields.io/node/v/@tomjs/logger) ![NPM](https://img.shields.io/npm/l/@tomjs/logger) [![Docs](https://raw.githubusercontent.com/tomjs/assets/main/npm/api.svg)](https://www.unpkg.com/browse/@tomjs/logger/dist/index.d.ts)
 
 **English** | [中文](./README.zh_CN.md)
 
@@ -21,5 +21,4 @@ npm i @tomjs/logger
 
 ## Documentation
 
-- [API Documentation](https://paka.dev/npm/@tomjs/logger) provided by [paka.dev](https://paka.dev).
 - [index.d.ts](https://www.unpkg.com/browse/@tomjs/logger/dist/index.d.ts) provided by [unpkg.com](https://www.unpkg.com).

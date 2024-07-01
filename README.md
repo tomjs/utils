@@ -1,6 +1,6 @@
 # utils
 
-[![npm](https://img.shields.io/npm/v/@tomjs/utils)](https://www.npmjs.com/package/@tomjs/utils) ![node-current (scoped)](https://img.shields.io/node/v/@tomjs/utils) ![NPM](https://img.shields.io/npm/l/@tomjs/utils) [![Docs](https://www.paka.dev/badges/v0/cute.svg)](https://www.paka.dev/npm/@tomjs/utils)
+[![npm](https://img.shields.io/npm/v/@tomjs/utils)](https://www.npmjs.com/package/@tomjs/utils) ![node-current (scoped)](https://img.shields.io/node/v/@tomjs/utils) ![NPM](https://img.shields.io/npm/l/@tomjs/utils)
 
 **English** | [中文](./README.zh_CN.md)
 
@@ -8,6 +8,7 @@
 
 | Module | Description | Version | Documentation |
 | --- | --- | --- | --- |
-| [@tomjs/utils](./packages/utils) | A collection of functions for `node.js` and `web` projects | [![npm](https://img.shields.io/npm/v/@tomjs/utils)](https://www.npmjs.com/package/@tomjs/utils) | [![Docs](https://www.paka.dev/badges/v0/cute.svg)](https://www.paka.dev/npm/@tomjs/utils) |
-| [@tomjs/node](./packages/node-utils) | A collection of functions for `node.js` projects | [![npm](https://img.shields.io/npm/v/@tomjs/node)](https://www.npmjs.com/package/@tomjs/node) | [![Docs](https://www.paka.dev/badges/v0/cute.svg)](https://www.paka.dev/npm/@tomjs/node) |
-| [@tomjs/logger](./packages/logger) | logger for [tomjs](https://github.com/tomjs) | [![npm](https://img.shields.io/npm/v/@tomjs/logger)](https://www.npmjs.com/package/@tomjs/logger) | [![Docs](https://www.paka.dev/badges/v0/cute.svg)](https://www.paka.dev/npm/@tomjs/logger) |
+| [@tomjs/logger](./packages/logger) | logger for [tomjs](https://github.com/tomjs) | [![npm](https://img.shields.io/npm/v/@tomjs/logger)](https://www.npmjs.com/package/@tomjs/logger) | [![Docs](https://raw.githubusercontent.com/tomjs/assets/main/npm/api.svg)](https://www.unpkg.com/browse/@tomjs/logger/dist/index.d.ts) |
+| [@tomjs/node](./packages/node-utils) | A collection of functions for `node.js` projects | [![npm](https://img.shields.io/npm/v/@tomjs/node)](https://www.npmjs.com/package/@tomjs/node) | [![Docs](https://raw.githubusercontent.com/tomjs/assets/main/npm/api.svg)](https://www.unpkg.com/browse/@tomjs/node/dist/index.d.ts) |
+| [@tomjs/pkg](./packages/pkg) | npm package tools | [![npm](https://img.shields.io/npm/v/@tomjs/pkg)](https://www.npmjs.com/package/@tomjs/pkg) | [![Docs](https://raw.githubusercontent.com/tomjs/assets/main/npm/api.svg)](https://www.unpkg.com/browse/@tomjs/pkg/dist/index.d.ts) |
+| [@tomjs/utils](./packages/utils) | A collection of functions for `node.js` and `web` projects | [![npm](https://img.shields.io/npm/v/@tomjs/utils)](https://www.npmjs.com/package/@tomjs/utils) | [![Docs](https://raw.githubusercontent.com/tomjs/assets/main/npm/api.svg)](https://www.unpkg.com/browse/@tomjs/utils/dist/index.d.ts) |

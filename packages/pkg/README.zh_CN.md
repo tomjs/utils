@@ -1,6 +1,6 @@
 # @tomjs/pkg
 
-[![npm](https://img.shields.io/npm/v/@tomjs/pkg)](https://www.npmjs.com/package/@tomjs/pkg) ![node-current (scoped)](https://img.shields.io/node/v/@tomjs/pkg) ![NPM](https://img.shields.io/npm/l/@tomjs/pkg) [![Docs](https://www.paka.dev/badges/v0/cute.svg)](https://www.paka.dev/npm/@tomjs/pkg)
+[![npm](https://img.shields.io/npm/v/@tomjs/pkg)](https://www.npmjs.com/package/@tomjs/pkg) ![node-current (scoped)](https://img.shields.io/node/v/@tomjs/pkg) ![NPM](https://img.shields.io/npm/l/@tomjs/pkg) [![Docs](https://raw.githubusercontent.com/tomjs/assets/main/npm/api.svg)](https://www.unpkg.com/browse/@tomjs/pkg/dist/index.d.ts)
 
 [English](./README.md) | **中文**
 
@@ -22,3 +22,7 @@ yarn add @tomjs/pkg -D
 # npm
 npm add @tomjs/pkg -D
 ```
+
+## 文档
+
+- [unpkg.com](https://www.unpkg.com/) 提供的 [index.d.ts](https://www.unpkg.com/browse/@tomjs/pkg/dist/index.d.ts).
