@@ -171,6 +171,13 @@ export class Logger {
     const { prefix } = this._opts;
     this._log(prefix ? chalk.yellow(prefix) : logSymbols.warning, ...args);
   }
+
+  /**
+   * add the specified yellow prefix or warning symbol before the log content
+   */
+  warn(...args: any[]) {
+    this.warning(...args);
+  }
 }
 
 export default Logger;
