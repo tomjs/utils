@@ -38,12 +38,9 @@ export interface LoggerOptions {
 export class Logger {
   private _opts: LoggerOptions = {};
   private _logDir?: string;
-  private _debug = false;
 
-  constructor(opts?: LoggerOptions) {
-    this._opts = Object.assign({}, opts);
-
-    this.initLogDir();
+  constructor(options?: LoggerOptions) {
+    this.setOptions(Object.assign({}, options));
   }
 
   private initLogDir() {
@@ -102,7 +99,15 @@ export class Logger {
    * set debug mode or not
    */
   enableDebug(debug: boolean) {
-    this._debug = !!debug;
+    this._opts.debug = !!debug;
+  }
+
+  /**
+   * set debug mode or not
+   */
+  setOptions(options: LoggerOptions) {
+    this._opts = Object.assign({}, options);
+    this.initLogDir();
   }
 
   /**
@@ -123,7 +128,7 @@ export class Logger {
    * only show in debug mode
    */
   debug(...args: any[]) {
-    if (this._debug) {
+    if (this._opts.debug) {
       this._log(
         ...args.map(s => {
           if (typeof s !== 'object') {
