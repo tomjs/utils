@@ -1,3 +1,7 @@
+## [1.2.0](https://github.com/tomjs/utils/compare/logger%401.1.4...logger%401.2.0) (2025-05-11)
+
+- feat: add setOptions method [5a2dbb0](https://github.com/tomjs/utils/commit/5a2dbb0)
+
 ## [1.1.4](https://github.com/tomjs/utils/compare/logger%401.1.3...logger%401.1.4) (2024-07-01)
 
 - docs: change api doc logo [6d45df2](https://github.com/tomjs/utils/commit/6d45df2)
