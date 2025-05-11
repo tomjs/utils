@@ -1,3 +1,7 @@
+## [1.3.0](https://github.com/tomjs/utils/compare/logger%401.2.0...logger%401.3.0) (2025-05-11)
+
+- feat: add warn method [5e31360](https://github.com/tomjs/utils/commit/5e31360)
+
 ## [1.2.0](https://github.com/tomjs/utils/compare/logger%401.1.4...logger%401.2.0) (2025-05-11)
 
 - feat: add setOptions method [5a2dbb0](https://github.com/tomjs/utils/commit/5a2dbb0)
