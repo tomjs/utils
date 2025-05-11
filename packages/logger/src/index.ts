@@ -30,6 +30,10 @@ export interface LoggerOptions {
    * @default 30
    */
   cleanup?: number;
+  /**
+   * log file root directory，default is '～/.tomjs'
+   */
+  root?: string;
 }
 
 /**
@@ -49,7 +53,9 @@ export class Logger {
       return;
     }
 
-    const logDir = path.join(os.homedir(), '.tomjs', directory);
+    const root = this._opts.root || path.join(os.homedir(), '.tomjs');
+
+    const logDir = path.join(root, directory);
     this._logDir = logDir;
 
     if (!fs.existsSync(logDir)) {
@@ -89,7 +95,7 @@ export class Logger {
 
     let list = [...args];
     if (this._opts.time) {
-      list = [dayjs().format('HH:mm:ss'), ...list];
+      list = [chalk.gray(dayjs().format('HH:mm:ss')), ...list];
     }
 
     console.log(list.map(s => (typeof s === 'object' ? '%o' : '%s')).join(' '), ...list);

@@ -4,9 +4,9 @@
   "version": "1.0.0",
   "description": "A collection of functions for `node.js` and `web` projects.",
   "engines": {
-    "node": ">=16"
+    "node": ">=18"
   },
-  "packageManager": "pnpm@9.4.0",
+  "packageManager": "pnpm@10.10.0",
   "workspaces": [
     "packages/*"
   ],
