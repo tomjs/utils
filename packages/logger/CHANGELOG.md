@@ -1,3 +1,7 @@
+## [1.4.0](https://github.com/tomjs/utils/compare/logger%401.3.0...logger%401.4.0) (2025-05-11)
+
+- feat: use gray color for time [7238007](https://github.com/tomjs/utils/commit/7238007)
+
 ## [1.3.0](https://github.com/tomjs/utils/compare/logger%401.2.0...logger%401.3.0) (2025-05-11)
 
 - feat: add warn method [5e31360](https://github.com/tomjs/utils/commit/5e31360)
