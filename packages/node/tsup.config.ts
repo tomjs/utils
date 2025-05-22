@@ -12,6 +12,5 @@ export default defineConfig((options) => {
     dts: true,
     sourcemap: isDev,
     splitting: true,
-    minifyWhitespace: !isDev,
   };
 });

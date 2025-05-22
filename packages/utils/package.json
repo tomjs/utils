@@ -43,7 +43,7 @@
     "registry": "https://registry.npmjs.org/"
   },
   "scripts": {
-    "build": "tsup && prettier --write ./dist",
+    "build": "tsup",
     "test": "vitest",
     "prepublishOnly": "pnpm build"
   },
