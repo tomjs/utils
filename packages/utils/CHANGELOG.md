@@ -1,3 +1,10 @@
+## [1.3.0](https://github.com/tomjs/utils/compare/utils%401.2.3...utils%401.3.0) (2025-05-22)
+
+- chore: change build config and script  [ebec025](https://github.com/tomjs/utils/commit/ebec025)
+- feat: add some array and object methods  [9e297f0](https://github.com/tomjs/utils/commit/9e297f0)
+- perf: optimizing the urlConcat method  [0f910eb](https://github.com/tomjs/utils/commit/0f910eb)
+- feat: use eslint@9 and format code  [9cd66de](https://github.com/tomjs/utils/commit/9cd66de)
+
 ## [1.2.3](https://github.com/tomjs/utils/compare/utils%401.2.2...utils%401.2.3) (2024-07-01)
 
 - docs: change api doc logo [6d45df2](https://github.com/tomjs/utils/commit/6d45df2)
