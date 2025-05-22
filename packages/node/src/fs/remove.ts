@@ -4,33 +4,29 @@ import fsp from 'node:fs/promises';
 /**
  * Removes files and directories (modeled on the standard POSIX rm utility).
  * @deprecated
- * @returns
  */
-export function removeFile(path: string) {
+export function removeFile(path: string): Promise<void> {
   return fsp.rm(path, { force: true, recursive: true });
 }
 
 /**
  * Removes files and directories (modeled on the standard POSIX rm utility).
  * @deprecated
- * @returns
  */
-export function removeFileSync(path: string) {
+export function removeFileSync(path: string): void {
   fs.rmSync(path, { force: true, recursive: true });
 }
 
 /**
  * Removes files and directories (modeled on the standard POSIX rm utility).
- * @returns
  */
-export function rm(path: string) {
+export function rm(path: string): Promise<void> {
   return fsp.rm(path, { force: true, recursive: true });
 }
 
 /**
  * Removes files and directories (modeled on the standard POSIX rm utility).
- * @returns
  */
-export function rmSync(path: string) {
+export function rmSync(path: string): void {
   fs.rmSync(path, { force: true, recursive: true });
 }

@@ -5,7 +5,7 @@ import fsp from 'node:fs/promises';
  * Synchronously reads the entire contents of a file.
  * @param path A path to a file
  */
-export function readFileSync(path: string) {
+export function readFileSync(path: string): string {
   return fs.readFileSync(path, 'utf8');
 }
 
@@ -13,7 +13,7 @@ export function readFileSync(path: string) {
  * Asynchronously reads the entire contents of a file.
  * @param path A path to a file
  */
-export function readFile(path: string) {
+export function readFile(path: string): Promise<string> {
   return fsp.readFile(path, 'utf8');
 }
 
@@ -22,7 +22,7 @@ export function readFile(path: string) {
  * @param path A path to a file
  * @param data Data to write to the file
  */
-export function writeFileSync(path: string, data: string) {
+export function writeFileSync(path: string, data: string): void {
   fs.writeFileSync(path, data, 'utf8');
 }
 
@@ -31,7 +31,7 @@ export function writeFileSync(path: string, data: string) {
  * @param path A path to a file
  * @param data Data to write to the file
  */
-export function writeFile(path: string, data: string) {
+export function writeFile(path: string, data: string): Promise<void> {
   return fsp.writeFile(path, data, 'utf8');
 }
 
@@ -39,7 +39,7 @@ export function writeFile(path: string, data: string) {
  * Synchronously reads the entire contents of a file, and returns the parsed JSON.
  * @param path path to json file
  */
-export function readJsonSync(path: string) {
+export function readJsonSync<T = any>(path: string): T | undefined {
   if (fs.existsSync(path)) {
     return JSON.parse(readFileSync(path));
   }
@@ -49,7 +49,7 @@ export function readJsonSync(path: string) {
  * Asynchronously reads the entire contents of a file, and returns the parsed JSON.
  * @param path path to json file
  */
-export async function readJson(path: string) {
+export async function readJson<T = any>(path: string): Promise<T | undefined> {
   if (fs.existsSync(path)) {
     const text = await readFile(path);
     return JSON.parse(text);
@@ -66,7 +66,7 @@ export interface WriteJsonOptions {
  * @param path path to json file
  * @param data data to write
  */
-export function writeJsonSync(path: string, data: string | object, options?: WriteJsonOptions) {
+export function writeJsonSync(path: string, data: string | object, options?: WriteJsonOptions): void {
   const opts: WriteJsonOptions = Object.assign(
     {
       replacer: null,
@@ -86,7 +86,7 @@ export function writeJsonSync(path: string, data: string | object, options?: Wri
  * @param path path to json file
  * @param data data to write
  */
-export function writeJson(path: string, data: string | object, options?: WriteJsonOptions) {
+export function writeJson(path: string, data: string | object, options?: WriteJsonOptions): Promise<void> {
   const opts: WriteJsonOptions = Object.assign(
     {
       replacer: null,

@@ -56,7 +56,7 @@ const configs: Record<PackageManagerId, PackageManager> = {
   },
 };
 
-function configFromPackageManagerField(pkg: any) {
+function configFromPackageManagerField(pkg: any): PackageManager | undefined {
   if (!pkg || typeof pkg.packageManager !== 'string') {
     return undefined;
   }
@@ -64,7 +64,7 @@ function configFromPackageManagerField(pkg: any) {
   const [cli, version] = pkg.packageManager.split('@') as [PackageManagerCLI, string];
 
   if (cli === 'yarn' && version && semver.gte(version, '2.0.0')) {
-    return configs['berry'];
+    return configs.berry;
   }
 
   const config = configs[cli];
@@ -75,19 +75,19 @@ function configFromPackageManagerField(pkg: any) {
   throw new Error(`Invalid package manager: ${pkg.packageManager}`);
 }
 
-function findLockfile(rootDirectory: string, config: PackageManager) {
+function findLockfile(rootDirectory: string, config: PackageManager): string | undefined {
   return config.lockfiles
     .map(filename => path.resolve(rootDirectory || '.', filename))
     .find(filepath => fs.existsSync(filepath));
 }
 
-function configFromLockfile(rootDirectory: string) {
+function configFromLockfile(rootDirectory: string): PackageManager | undefined {
   return [configs.npm, configs.pnpm, configs.yarn].find(config =>
     findLockfile(rootDirectory, config),
   );
 }
 
-export async function getPackageManager(rootDir: string) {
+export async function getPackageManager(rootDir: string): Promise<PackageManager> {
   const pkg = await readJson(path.join(rootDir, 'package.json'));
   const pm = configFromPackageManagerField(pkg) || configFromLockfile(rootDir) || configs.npm;
 

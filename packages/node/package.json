@@ -2,30 +2,35 @@
   "name": "@tomjs/node",
   "version": "2.2.3",
   "description": "A collection of functions for `node.js` projects",
-  "keywords": [
-    "node",
-    "utils"
-  ],
   "author": {
     "name": "Tom Gao",
     "email": "tom@tomgao.cc"
   },
   "license": "MIT",
-  "main": "./dist/index.js",
-  "module": "./dist/index.mjs",
-  "types": "./dist/index.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tomjs/utils.git",
+    "directory": "packages/node"
+  },
+  "keywords": [
+    "node",
+    "utils"
+  ],
   "exports": {
     ".": {
-      "require": {
-        "default": "./dist/index.js",
-        "types": "./dist/index.d.ts"
-      },
       "import": {
-        "default": "./dist/index.mjs",
-        "types": "./dist/index.d.mts"
+        "types": "./dist/index.d.mts",
+        "default": "./dist/index.mjs"
+      },
+      "require": {
+        "types": "./dist/index.d.ts",
+        "default": "./dist/index.js"
       }
     }
   },
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
   "files": [
     "dist"
   ],
@@ -35,11 +40,6 @@
   "publishConfig": {
     "access": "public",
     "registry": "https://registry.npmjs.org/"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/tomjs/utils.git",
-    "directory": "packages/node"
   },
   "scripts": {
     "build": "tsup && prettier --write ./dist",

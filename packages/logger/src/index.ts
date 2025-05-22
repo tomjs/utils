@@ -47,7 +47,7 @@ export class Logger {
     this.setOptions(Object.assign({}, options));
   }
 
-  private initLogDir() {
+  private initLogDir(): void {
     const { directory, cleanup } = this._opts;
     if (!directory) {
       return;
@@ -62,7 +62,7 @@ export class Logger {
       fs.mkdirSync(logDir, { recursive: true });
     }
 
-    fs.readdirSync(logDir).forEach(s => {
+    fs.readdirSync(logDir).forEach((s) => {
       if (
         dayjs(s.substring(0, 8)).isBefore(
           dayjs()
@@ -75,11 +75,11 @@ export class Logger {
     });
   }
 
-  private format(...args: any[]) {
+  private format(...args: any[]): string {
     return args.map(s => (typeof s === 'object' ? JSON.stringify(s) : s || '')).join(' ');
   }
 
-  private _writeLog(...args: any[]) {
+  private _writeLog(...args: any[]): void {
     if (!this._logDir) {
       return;
     }
@@ -90,7 +90,7 @@ export class Logger {
     );
   }
 
-  private _log(...args: any[]) {
+  private _log(...args: any[]): void {
     this._writeLog(...args);
 
     let list = [...args];
@@ -104,14 +104,14 @@ export class Logger {
   /**
    * set debug mode or not
    */
-  enableDebug(debug: boolean) {
+  enableDebug(debug: boolean): void {
     this._opts.debug = !!debug;
   }
 
   /**
    * set debug mode or not
    */
-  setOptions(options: LoggerOptions) {
+  setOptions(options: LoggerOptions): void {
     this._opts = Object.assign({}, options);
     this.initLogDir();
   }
@@ -119,24 +119,24 @@ export class Logger {
   /**
    * like console.log
    */
-  log(...args: any[]) {
+  log(...args: any[]): void {
     this._log(...args);
   }
 
   /**
    * write log to file
    */
-  write(...args: any[]) {
+  write(...args: any[]): void {
     this._writeLog(...args);
   }
 
   /**
    * only show in debug mode
    */
-  debug(...args: any[]) {
+  debug(...args: any[]): void {
     if (this._opts.debug) {
       this._log(
-        ...args.map(s => {
+        ...args.map((s) => {
           if (typeof s !== 'object') {
             return chalk.gray(s);
           }
@@ -149,7 +149,7 @@ export class Logger {
   /**
    * add the specified red prefix or error symbol before the log content
    */
-  error(...args: any[]) {
+  error(...args: any[]): void {
     const { prefix } = this._opts;
     this._log(prefix ? chalk.red(prefix) : logSymbols.error, ...args);
   }
@@ -157,7 +157,7 @@ export class Logger {
   /**
    * add the specified blue prefix or info symbol before the log content
    */
-  info(...args: any[]) {
+  info(...args: any[]): void {
     const { prefix } = this._opts;
     this._log(prefix ? chalk.blue(prefix) : logSymbols.info, ...args);
   }
@@ -165,7 +165,7 @@ export class Logger {
   /**
    * add the specified green prefix or success symbol before the log content
    */
-  success(...args: any[]) {
+  success(...args: any[]): void {
     const { prefix } = this._opts;
     this._log(prefix ? chalk.green(prefix) : logSymbols.success, ...args);
   }
@@ -173,7 +173,7 @@ export class Logger {
   /**
    * add the specified yellow prefix or warning symbol before the log content
    */
-  warning(...args: any[]) {
+  warning(...args: any[]): void {
     const { prefix } = this._opts;
     this._log(prefix ? chalk.yellow(prefix) : logSymbols.warning, ...args);
   }
@@ -181,7 +181,7 @@ export class Logger {
   /**
    * add the specified yellow prefix or warning symbol before the log content
    */
-  warn(...args: any[]) {
+  warn(...args: any[]): void {
     this.warning(...args);
   }
 }

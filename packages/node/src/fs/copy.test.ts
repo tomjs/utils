@@ -43,7 +43,7 @@ it('fs.copySync dir', () => {
   const src = path.join(testPath, `${now}_sync_src`);
   // files
   const filePaths = ['a', 'a/a1', 'b', 'b/b1/b2'];
-  filePaths.forEach(s => {
+  filePaths.forEach((s) => {
     const dirPath = path.join(src, s);
     mkdirSync(dirPath);
     writeFileSync(path.join(dirPath, 'file.txt'), `copy sync dir: ${now}`);
@@ -63,7 +63,7 @@ it('fs.copy dir', async () => {
   const src = path.join(testPath, `${now}_async_src`);
   // files
   const filePaths = ['a', 'a/a1', 'b', 'b/b1/b2'];
-  filePaths.forEach(s => {
+  filePaths.forEach((s) => {
     const dirPath = path.join(src, s);
     mkdirSync(dirPath);
     writeFileSync(path.join(dirPath, 'file.txt'), `copy async dir: ${now}`);

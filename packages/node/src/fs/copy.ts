@@ -3,7 +3,7 @@ import fsp from 'node:fs/promises';
 import path from 'node:path';
 import { mkdir } from './dir';
 
-function copyDirSync(srcDir: string, destDir: string) {
+function copyDirSync(srcDir: string, destDir: string): void {
   fs.mkdirSync(destDir, { recursive: true });
 
   for (const file of fs.readdirSync(srcDir)) {
@@ -21,16 +21,17 @@ function copyDirSync(srcDir: string, destDir: string) {
  * @param src The source path of the file or directory to be copied.
  * @param dest The destination path where the file or directory should be copied to.
  */
-export function copySync(src: string, dest: string) {
+export function copySync(src: string, dest: string): void {
   const stat = fs.statSync(src);
   if (stat.isDirectory()) {
     copyDirSync(src, dest);
-  } else {
+  }
+  else {
     fs.copyFileSync(src, dest);
   }
 }
 
-async function copyDir(srcDir: string, destDir: string) {
+async function copyDir(srcDir: string, destDir: string): Promise<void> {
   await mkdir(destDir);
   const files = await fsp.readdir(srcDir);
 
@@ -53,11 +54,12 @@ async function copyDir(srcDir: string, destDir: string) {
  * @param src The source path of the file or directory to be copied.
  * @param dest The destination path where the file or directory should be copied to.
  */
-export async function copy(src: string, dest: string) {
+export async function copy(src: string, dest: string): Promise<void> {
   const stat = fs.statSync(src);
   if (stat.isDirectory()) {
     await copyDir(src, dest);
-  } else {
+  }
+  else {
     await fsp.copyFile(src, dest);
   }
 }

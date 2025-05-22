@@ -4,26 +4,24 @@ import path from 'node:path';
 import { rm, rmSync } from './remove';
 
 // Adapted from https://github.com/sindresorhus/make-dir
-const checkPath = (pth: string) => {
+function checkPath(pth: string): void {
   if (process.platform === 'win32') {
     const pathHasInvalidWinCharacters = /[<>:"|?*]/.test(pth.replace(path.parse(pth).root, ''));
 
     if (pathHasInvalidWinCharacters) {
       const error = new Error(`Path contains invalid characters: ${pth}`);
-      // @ts-ignore
-      error.code = 'EINVAL';
+      (error as any).code = 'EINVAL';
       throw error;
     }
   }
-};
+}
 
 /**
  * Asynchronously creates a directory. Returns undefined, or if recursive is true, the first directory path created.
  * @param dir directory path.
  * @param mode directory permission mode. If not specified, defaults to 0o777.
- * @returns
  */
-export function mkdir(dir: string, mode?: string | number) {
+export function mkdir(dir: string, mode?: string | number): Promise<string | undefined> {
   checkPath(dir);
 
   return fsp.mkdir(dir, {
@@ -44,9 +42,8 @@ export const mkdirp = mkdir;
  * Synchronously creates a directory. Returns undefined, or if recursive is true, the first directory path created.
  * @param dir directory path.
  * @param mode directory permission mode. If not specified, defaults to 0o777.
- * @returns
  */
-export function mkdirSync(dir: string, mode?: string | number) {
+export function mkdirSync(dir: string, mode?: string | number): string | undefined {
   checkPath(dir);
 
   return fs.mkdirSync(dir, {
@@ -58,7 +55,6 @@ export function mkdirSync(dir: string, mode?: string | number) {
  * Synchronously creates a directory. Returns undefined, or if recursive is true, the first directory path created.
  * @param dir directory path.
  * @param mode directory permission mode. If not specified, defaults to 0o777.
- * @returns
  */
 export const mkdirpSync = mkdirSync;
 
@@ -67,7 +63,7 @@ export const mkdirpSync = mkdirSync;
  * If the directory does not exist, it is created. The directory itself is not deleted.
  * @param dir directory path.
  */
-export async function emptyDir(dir: string) {
+export async function emptyDir(dir: string): Promise<void> {
   await rm(dir);
   await mkdir(dir);
 }
@@ -77,7 +73,7 @@ export async function emptyDir(dir: string) {
  * If the directory does not exist, it is created. The directory itself is not deleted.
  * @param dir directory path.
  */
-export function emptyDirSync(dir: string) {
+export function emptyDirSync(dir: string): void {
   rmSync(dir);
   mkdirSync(dir);
 }

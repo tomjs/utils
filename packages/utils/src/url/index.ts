@@ -1,9 +1,8 @@
 /**
  * Concatenate urls using `/` to form a complete url
  * @param parts url paths
- * @returns
  */
-export function urlConcat(...parts: string[]) {
+export function urlConcat(...parts: string[]): string {
   return parts
     .map(part => (part || '').trim())
     .filter(part => part)

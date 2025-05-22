@@ -2,9 +2,11 @@
   "name": "@tomjs/pkg",
   "version": "1.0.4",
   "description": "npm package tools",
-  "engines": {
-    "node": ">=16"
+  "author": {
+    "name": "Tom Gao",
+    "email": "tom@tomgao.cc"
   },
+  "license": "MIT",
   "keywords": [
     "package",
     "pkg",
@@ -12,28 +14,26 @@
     "yarn",
     "pnpm"
   ],
-  "author": {
-    "name": "Tom Gao",
-    "email": "tom@tomgao.cc"
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./dist/index.d.mts",
+        "default": "./dist/index.mjs"
+      },
+      "require": {
+        "types": "./dist/index.d.ts",
+        "default": "./dist/index.js"
+      }
+    }
   },
-  "license": "MIT",
-  "files": [
-    "dist"
-  ],
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
   "types": "./dist/index.d.ts",
-  "exports": {
-    ".": {
-      "require": {
-        "default": "./dist/index.js",
-        "types": "./dist/index.d.ts"
-      },
-      "import": {
-        "default": "./dist/index.mjs",
-        "types": "./dist/index.d.mts"
-      }
-    }
+  "files": [
+    "dist"
+  ],
+  "engines": {
+    "node": ">=16"
   },
   "publishConfig": {
     "access": "public",
