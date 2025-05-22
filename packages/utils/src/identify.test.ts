@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { uuid, uuid32, uuid36 } from './index';
+import { uuid, uuid32, uuid36 } from './identify';
 
 describe('identify test', () => {
   it('uuid', () => {
