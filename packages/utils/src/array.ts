@@ -214,13 +214,13 @@ export function getArrayChildrenByParentId<T extends object>(
  * Get all descendant item ids based on parent id
  * @param data 待处理的数组
  * @param parentId 父级节点id
- * @param [key]
+ * @param key 标识字段，默认 id | Identifier field, default id
  */
 export function getArrayChildrenIdByParentId(
   data: Record<string, any>[] | undefined,
   parentId: string,
   key = 'id',
-): Record<string, any>[] | undefined {
+): any[] | undefined {
   const children = getArrayChildrenByParentId(data, parentId, key);
   if (!Array.isArray(children)) {
     return;
