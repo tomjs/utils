@@ -216,11 +216,11 @@ export function getArrayChildrenByParentId<T extends object>(
  * @param parentId 父级节点id
  * @param key 标识字段，默认 id | Identifier field, default id
  */
-export function getArrayChildrenIdByParentId(
+export function getArrayChildrenIdByParentId<T = any>(
   data: Record<string, any>[] | undefined,
   parentId: string,
   key = 'id',
-): any[] | undefined {
+): T[] | undefined {
   const children = getArrayChildrenByParentId(data, parentId, key);
   if (!Array.isArray(children)) {
     return;
