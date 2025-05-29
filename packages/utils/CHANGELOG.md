@@ -1,3 +1,7 @@
+## [1.3.2](https://github.com/tomjs/utils/compare/utils%401.3.1...utils%401.3.2) (2025-05-29)
+
+- feat: better return type  [2382a89](https://github.com/tomjs/utils/commit/2382a89)
+
 ## [1.3.1](https://github.com/tomjs/utils/compare/utils%401.3.0...utils%401.3.1) (2025-05-29)
 
 - fix: return type  [1d2d01a](https://github.com/tomjs/utils/commit/1d2d01a)
