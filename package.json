@@ -2,7 +2,7 @@
   "name": "@tomjs/utils-packages",
   "version": "1.0.0",
   "private": true,
-  "packageManager": "pnpm@10.10.0",
+  "packageManager": "pnpm@10.17.0",
   "description": "A collection of functions for `node.js` and `web` projects.",
   "engines": {
     "node": ">=18"
@@ -17,19 +17,20 @@
     "prepare": "simple-git-hooks"
   },
   "devDependencies": {
-    "@commitlint/cli": "^19.8.1",
-    "@tomjs/commitlint": "^4.0.0",
-    "@tomjs/eslint": "^5.1.0",
+    "@antfu/eslint-config": "^6.2.0",
+    "@commitlint/cli": "^20.1.0",
+    "@tomjs/commitlint": "^5.0.0",
+    "@tomjs/eslint": "^6.0.0",
     "@tomjs/tsconfig": "^2.0.0",
-    "@types/node": "^18.19.103",
-    "cross-env": "^7.0.3",
-    "eslint": "^9.27.0",
-    "lint-staged": "^16.0.0",
-    "rimraf": "^5.0.10",
-    "simple-git-hooks": "^2.13.0",
-    "tsup": "^8.5.0",
-    "tsx": "^4.19.4",
+    "@types/node": "^20.19.25",
+    "cross-env": "^10.1.0",
+    "eslint": "^9.39.1",
+    "lint-staged": "^16.2.6",
+    "rimraf": "^6.1.0",
+    "simple-git-hooks": "^2.13.1",
+    "tsdown": "^0.16.4",
+    "tsx": "^4.20.6",
     "typescript": "~5.8.3",
-    "vitest": "^3.1.4"
+    "vitest": "^4.0.9"
   }
 }

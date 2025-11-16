@@ -1,17 +1,14 @@
-import { defineConfig } from 'tsup';
+import { defineConfig } from 'tsdown';
 
 export default defineConfig((options) => {
   const isDev = !!options.watch;
 
   return {
     entry: ['src/index.ts'],
-    format: ['esm', 'cjs', 'iife'],
-    globalName: 'Tomjs',
+    format: ['esm', 'cjs'],
     target: 'node16',
     shims: true,
-    clean: true,
     dts: true,
     sourcemap: isDev,
-    splitting: true,
   };
 });

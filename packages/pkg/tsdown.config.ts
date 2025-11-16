@@ -1,4 +1,4 @@
-import { defineConfig } from 'tsup';
+import { defineConfig } from 'tsdown';
 
 export default defineConfig((options) => {
   const isDev = !!options.watch;
@@ -8,9 +8,10 @@ export default defineConfig((options) => {
     format: ['esm', 'cjs'],
     target: 'node16',
     shims: true,
-    clean: true,
     dts: true,
     sourcemap: isDev,
-    splitting: true,
+    env: {
+      NODE_ENV: isDev ? 'development' : 'production',
+    },
   };
 });

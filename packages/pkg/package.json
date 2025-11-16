@@ -41,7 +41,7 @@
   },
   "scripts": {
     "dev": "tsup --watch",
-    "build": "tsup",
+    "build": "tsdown",
     "prepublishOnly": "pnpm build"
   },
   "dependencies": {
