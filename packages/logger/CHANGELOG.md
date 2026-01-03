@@ -1,3 +1,10 @@
+## [2.0.0](https://github.com/tomjs/utils/compare/logger%401.4.0...logger%402.0.0) (2026-01-03)
+
+- feat: use vite time format  [b89156d](https://github.com/tomjs/utils/commit/b89156d)
+- chore: change tsup to tsdown  [abb212a](https://github.com/tomjs/utils/commit/abb212a)
+- chore: change build config and script  [ebec025](https://github.com/tomjs/utils/commit/ebec025)
+- feat: use eslint@9 and format code  [9cd66de](https://github.com/tomjs/utils/commit/9cd66de)
+
 ## [1.4.0](https://github.com/tomjs/utils/compare/logger%401.3.0...logger%401.4.0) (2025-05-11)
 
 - feat: use gray color for time [7238007](https://github.com/tomjs/utils/commit/7238007)
