@@ -1,9 +1,9 @@
 import fs from 'node:fs';
 import os from 'node:os';
 import path from 'node:path';
-import chalk from 'chalk';
 import dayjs from 'dayjs';
 import logSymbols from 'log-symbols';
+import chalk from 'picocolors';
 import stripAnsi from 'strip-ansi';
 
 export interface LoggerOptions {
@@ -34,6 +34,17 @@ export interface LoggerOptions {
    * log file root directory，default is '～/.tomjs'
    */
   root?: string;
+}
+
+// copy https://github.com/vitejs/vite/blob/2ba4e990192845e01c733aa186c9599cdb5bb8fe/packages/vite/src/node/logger.ts#L58-L66
+let timeFormatter: Intl.DateTimeFormat;
+function getTimeFormatter() {
+  timeFormatter ??= new Intl.DateTimeFormat(undefined, {
+    hour: 'numeric',
+    minute: 'numeric',
+    second: 'numeric',
+  });
+  return timeFormatter;
 }
 
 /**
@@ -95,7 +106,7 @@ export class Logger {
 
     let list = [...args];
     if (this._opts.time) {
-      list = [chalk.gray(dayjs().format('HH:mm:ss')), ...list];
+      list = [chalk.dim(getTimeFormatter().format(new Date())), ...list];
     }
 
     console.log(list.map(s => (typeof s === 'object' ? '%o' : '%s')).join(' '), ...list);

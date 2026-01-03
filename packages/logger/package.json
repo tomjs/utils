@@ -47,9 +47,9 @@
     "prepublishOnly": "pnpm build"
   },
   "dependencies": {
-    "chalk": "^4.1.2",
     "dayjs": "^1.11.13",
     "log-symbols": "^4.1.0",
+    "picocolors": "^1.1.1",
     "strip-ansi": "^6.0.1"
   }
 }
