@@ -43,12 +43,12 @@
   },
   "scripts": {
     "build": "tsdown",
-    "test": "vitest",
+    "print": "tsx ./scripts/print.ts",
     "prepublishOnly": "pnpm build"
   },
   "dependencies": {
     "dayjs": "^1.11.13",
-    "log-symbols": "^4.1.0",
+    "is-unicode-supported": "^2.1.0",
     "picocolors": "^1.1.1",
     "strip-ansi": "^6.0.1"
   }

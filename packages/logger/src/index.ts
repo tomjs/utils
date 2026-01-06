@@ -2,9 +2,9 @@ import fs from 'node:fs';
 import os from 'node:os';
 import path from 'node:path';
 import dayjs from 'dayjs';
-import logSymbols from 'log-symbols';
-import chalk from 'picocolors';
+import colors from 'picocolors';
 import stripAnsi from 'strip-ansi';
+import { logColors, logSymbols } from './colors';
 
 export interface LoggerOptions {
   /**
@@ -17,10 +17,16 @@ export interface LoggerOptions {
    */
   debug?: boolean;
   /**
-   * show time in log
+   * show time in log. use `flag:"time"` replace time
    * @default false
+   * @deprecated
    */
   time?: boolean;
+  /**
+   * show log symbols
+   * @default 'symbol'
+   */
+  flag?: 'time' | 'symbol' | 'none';
   /**
    * specify the log directory name
    */
@@ -101,15 +107,25 @@ export class Logger {
     );
   }
 
-  private _log(...args: any[]): void {
-    this._writeLog(...args);
+  private _log(type: 'info' | 'warn' | 'error' | 'success' | 'log', ...args: any[]): void {
+    this._writeLog(type, ...args);
 
-    let list = [...args];
-    if (this._opts.time) {
-      list = [chalk.dim(getTimeFormatter().format(new Date())), ...list];
+    const flag = this._opts.flag || 'symbol';
+    const preList: string[] = [];
+    if (flag === 'time') {
+      preList.push(colors.dim(getTimeFormatter().format(new Date())));
+    }
+    else if (flag === 'symbol') {
+      preList.push(logSymbols[type]);
     }
 
-    console.log(list.map(s => (typeof s === 'object' ? '%o' : '%s')).join(' '), ...list);
+    const { prefix } = this._opts;
+    if (prefix) {
+      preList.push(logColors[type](colors.bold(prefix)));
+    }
+
+    const list = preList.concat(args);
+    console.log(preList.concat(args).map(s => (typeof s === 'object' ? '%o' : '%s')).join(' '), ...list);
   }
 
   /**
@@ -123,7 +139,7 @@ export class Logger {
    * set debug mode or not
    */
   setOptions(options: LoggerOptions): void {
-    this._opts = Object.assign({}, options);
+    this._opts = Object.assign({}, this._opts, options);
     this.initLogDir();
   }
 
@@ -131,7 +147,7 @@ export class Logger {
    * like console.log
    */
   log(...args: any[]): void {
-    this._log(...args);
+    this._log('log', ...args);
   }
 
   /**
@@ -146,14 +162,7 @@ export class Logger {
    */
   debug(...args: any[]): void {
     if (this._opts.debug) {
-      this._log(
-        ...args.map((s) => {
-          if (typeof s !== 'object') {
-            return chalk.gray(s);
-          }
-          return s;
-        }),
-      );
+      this._log('log', ...args);
     }
   }
 
@@ -161,32 +170,28 @@ export class Logger {
    * add the specified red prefix or error symbol before the log content
    */
   error(...args: any[]): void {
-    const { prefix } = this._opts;
-    this._log(prefix ? chalk.red(prefix) : logSymbols.error, ...args);
+    this._log(`error`, ...args);
   }
 
   /**
    * add the specified blue prefix or info symbol before the log content
    */
   info(...args: any[]): void {
-    const { prefix } = this._opts;
-    this._log(prefix ? chalk.blue(prefix) : logSymbols.info, ...args);
+    this._log('info', ...args);
   }
 
   /**
    * add the specified green prefix or success symbol before the log content
    */
   success(...args: any[]): void {
-    const { prefix } = this._opts;
-    this._log(prefix ? chalk.green(prefix) : logSymbols.success, ...args);
+    this._log('success', ...args);
   }
 
   /**
    * add the specified yellow prefix or warning symbol before the log content
    */
   warning(...args: any[]): void {
-    const { prefix } = this._opts;
-    this._log(prefix ? chalk.yellow(prefix) : logSymbols.warning, ...args);
+    this._log('warn', ...args);
   }
 
   /**
