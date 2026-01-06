@@ -1,3 +1,7 @@
+## [3.0.0](https://github.com/tomjs/utils/compare/logger%402.0.0...logger%403.0.0) (2026-01-06)
+
+- feat: use flag replace time option  [c584ce0](https://github.com/tomjs/utils/commit/c584ce0)
+
 ## [2.0.0](https://github.com/tomjs/utils/compare/logger%401.4.0...logger%402.0.0) (2026-01-03)
 
 - feat: use vite time format  [b89156d](https://github.com/tomjs/utils/commit/b89156d)
